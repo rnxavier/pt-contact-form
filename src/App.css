@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* WELCOME */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img-div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  width: 30%;
+  height: 30%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.welcome-page {
+  width: 50%;
+  background: rgb(255, 255, 255, 0.9);
+  padding: 50px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #000000b3;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+
+}
+
+.welcome-logo {
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 5%;
+  color: #1b4079;
+}
+
+.welcome-logo span {
+  font-weight: 500;
+  font-size: 2.6rem;
+}
+
+.welcome-page h1{
+  margin-top: 0;
+  font-weight: 100;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn-div{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+
+.welcome-page-btns {
+  display: block;
+  width: 20%;
+  padding: 1% 3%;
+  font-size: 20px;
+  border-radius: 8px ;
+  border: 2px solid #1b4079;
+  text-decoration: none;
+  box-shadow: 0 0 10px #808080;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.welcome-btn {
+  margin-top: 5%;
+  background:#1b4079;
+  color: #fff;
+}
+
+/* FORM */
+
+.txtb {
+  border: 1px solid gray;
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-style: normal;
+}
+
+.home-btn {
+  width: 80%;
+  margin-top: 5%;
+  border: none;
+  background: #fff;
+  color:#1b4079;
+  box-shadow: none;
+  font-weight: 500;
+}
+
+/* .txtb input[type=text] {
+  width: 100%;
+} */
+
+.txtb input, .txtb textarea {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 1.125rem;
+  margin-top: 6px;
+}
+
+.txtb label {
+  display: block;
+  text-align: left;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.form-footer {
+  display: block;
+}
+
+.home-btn:hover {
+  color: #66D3FA;
+}
+
+
+.submit-btn-text span {
+  margin-right: 3%;
 }
