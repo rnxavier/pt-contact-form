@@ -1,6 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Submitted = () => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/");
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, []);
+
   let navigate = useNavigate();
   const routeChange = () => {
     navigate("/");
