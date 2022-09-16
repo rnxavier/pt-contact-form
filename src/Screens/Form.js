@@ -28,13 +28,31 @@ const Form = () => {
     let numberError = "";
     let msgError = "";
 
-    if (!formData.email.includes("@")) {
-      emailError = "Invalid Email";
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!emailRegex.test(formData.email)) {
+      emailError = "Invalid email format";
     }
-    if (emailError) {
-      setErrors({ ...errors, emailError: emailError });
+
+    if (!formData.name) {
+      nameError = "Name cannot be blank";
+    }
+
+    const numberRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
+
+    if (!numberRegex.test(formData.number)) {
+      numberError = "Invalid number";
+    }
+
+    if (!formData.message) {
+      msgError = "Message cannot be blank";
+    }
+
+    if (emailError || nameError || numberError || msgError) {
+      setErrors({ ...errors, emailError, nameError, numberError, msgError });
       return false;
     }
+
     return true;
   };
 
@@ -116,7 +134,7 @@ const Form = () => {
         <div className="txtb">
           <label>Contact Number</label>
           <input
-            type="number"
+            // type="number"
             name="number"
             value={formData.number}
             onChange={(e) => {
