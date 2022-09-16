@@ -15,30 +15,64 @@ const Form = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({
+    nameError: "",
+    emailError: "",
+    numberError: "",
+    msgError: "",
+  });
+
+  const validate = () => {
+    let nameError = "";
+    let emailError = "";
+    let numberError = "";
+    let msgError = "";
+
+    if (!formData.email.includes("@")) {
+      emailError = "Invalid Email";
+    }
+    if (emailError) {
+      setErrors({ ...errors, emailError: emailError });
+      return false;
+    }
+    return true;
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(serviceID, templateID, form.current, publicID)
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      )
-      .then(() => {
-        alert(`Thank you for your enquiry! ${"\n"}I will be in touch soon 😎`);
-      })
-      .then(() => {
-        setFormData({
-          name: "",
-          email: "",
-          number: "",
-          message: "",
+    console.log(errors);
+    const isValid = validate();
+    if (isValid) {
+      emailjs
+        .sendForm(serviceID, templateID, form.current, publicID)
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        )
+        .then(() => {
+          setFormData({
+            name: "",
+            email: "",
+            number: "",
+            message: "",
+          });
+          setErrors({
+            nameError: "",
+            emailError: "",
+            numberError: "",
+            msgError: "",
+          });
         });
-      });
+      // .then(() => {
+      //   alert(
+      //     `Thank you for your enquiry! ${"\n"}I will be in touch soon 😎`
+      //   );
+      // });
+    }
   };
 
   let navigate = useNavigate();
@@ -56,25 +90,27 @@ const Form = () => {
         <div className="txtb">
           <label>Full Name</label>
           <input
-            type="text"
+            // type="text"
             name="name"
             value={formData.name}
             onChange={(e) => {
               setFormData({ ...formData, name: e.target.value });
             }}
           />
+          {errors.nameError ? <p>{errors.nameError}</p> : null}
         </div>
 
         <div className="txtb">
           <label>Email Address</label>
           <input
-            type="email"
+            // type="email"
             name="email"
             value={formData.email}
             onChange={(e) => {
               setFormData({ ...formData, email: e.target.value });
             }}
           />
+          {errors.emailError ? <p>{errors.emailError}</p> : null}
         </div>
 
         <div className="txtb">
@@ -87,6 +123,7 @@ const Form = () => {
               setFormData({ ...formData, number: e.target.value });
             }}
           />
+          {errors.numberError ? <p>{errors.numberError}</p> : null}
         </div>
 
         <div className="txtb">
@@ -98,6 +135,7 @@ const Form = () => {
               setFormData({ ...formData, message: e.target.value });
             }}
           ></textarea>
+          {errors.msgError ? <p>{errors.msgError}</p> : null}
         </div>
 
         <div className="form-footer">
