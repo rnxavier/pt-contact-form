@@ -38,7 +38,7 @@ const Form = () => {
       nameError = "Name cannot be blank";
     }
 
-    const numberRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
+    const numberRegex = /((\+44(\s\(0\)\s|\s0\s|\s)?)|0)7\d{3}(\s)?\d{6}/g;
 
     if (!numberRegex.test(formData.number)) {
       numberError = "Invalid number";
@@ -84,12 +84,10 @@ const Form = () => {
             numberError: "",
             msgError: "",
           });
+        })
+        .then(() => {
+          navigate("/submission");
         });
-      // .then(() => {
-      //   alert(
-      //     `Thank you for your enquiry! ${"\n"}I will be in touch soon 😎`
-      //   );
-      // });
     }
   };
 
