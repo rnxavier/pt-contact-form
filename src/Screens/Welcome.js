@@ -9,6 +9,7 @@ const Welcome = () => {
 
   return (
     <div className="welcome-page">
+      <p>PERSONAL TRAINER ENQUIRIES</p>
       <div className="welcome-logo">
         Bizzie💪🏾<span>Trainer</span>
       </div>
