@@ -97,7 +97,7 @@ const Form = () => {
   };
   return (
     <div className="welcome-page">
-      <div className="welcome-logo">
+      <div className="form-page-logo">
         Bizzie💪🏾<span>Trainer</span>
       </div>
       <form ref={form} onSubmit={sendEmail}>

@@ -17,7 +17,7 @@ img {
 .welcome-page {
   width: 90%;
   background: rgb(255, 255, 255, 0.9);
-  padding: 50px 40px;
+  padding: 20px 40px;
   border-radius: 8px;
   box-shadow: 0 0 20px #000000b3;
   margin: auto;
@@ -26,14 +26,15 @@ img {
 }
 
 .welcome-page p {
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 3.5rem;
+  font-weight: 700;
   text-align: center;
+  margin-top: 0;
 }
 
 .welcome-logo {
   font-weight: 500;
-  font-size: 2.8rem;
+  font-size: 3.4rem;
   text-align: center;
   margin-bottom: 5%;
   color: #95c128;
@@ -41,13 +42,13 @@ img {
 
 .welcome-logo span {
   font-weight: 500;
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 
 .welcome-page h1{
   margin-top: 0;
   font-weight: 100;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -63,7 +64,7 @@ img {
   display: block;
   width: 40%;
   padding: 1% 3%;
-  font-size: 30px;
+  font-size: 37px;
   border-radius: 8px ;
   border: 2px solid #95c128;
   text-decoration: none;
@@ -71,6 +72,7 @@ img {
   text-align: center;
   cursor: pointer;
   margin: 0 auto;
+  font-weight: 500;
 }
 
 .welcome-btn {
@@ -80,6 +82,23 @@ img {
 }
 
 /* FORM */
+
+.form-page-logo {
+  font-weight: 500;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2%;
+  color: #95c128;
+}
+
+.form-page-logo span {
+  font-weight: 500;
+  font-size: 2.6rem;
+}
+
+form h1 {
+  font-size: 1.8rem !important;
+}
 
 .txtb {
   border: 1px solid gray;
@@ -91,7 +110,7 @@ img {
 
 .home-btn {
   width: 80%;
-  margin-top: 5%;
+  margin-top: 2%;
   border: none;
   background: #fff;
   color:#95c128;
@@ -114,7 +133,7 @@ img {
   text-align: left;
   color: #333;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .txtb p {
@@ -129,14 +148,19 @@ img {
   color: #749424;
 }
 
+.home-btn {
+  font-size: 30px;
+}
+
 textarea {
   height: 80px
 }
 
-
 .submit-btn-text span {
   margin-right: 3%;
+  font-size: 30px; 
 }
+
 
 /* SUBMITTED */
 .submitted-logo {
