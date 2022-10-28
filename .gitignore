@@ -10,6 +10,8 @@
 
 # production
 /build
+/public
+/ptContactForm.git
 
 # misc
 .DS_Store
