@@ -88,13 +88,12 @@
   font-weight: 500;
   font-size: 3rem;
   text-align: center;
-  /* margin-bottom: 2%; */
   color: #95c128;
 }
 
 .form-page-logo img {
-  width: 35%;
-  height: 35%;
+  width: 40%;
+  height: 40%;
   margin-bottom: 0;
 }
 
