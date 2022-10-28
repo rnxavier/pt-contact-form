@@ -4,6 +4,7 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 import { serviceID, publicID, templateID } from "../secret";
 import emailjs from "@emailjs/browser";
+import bizLogo from "./bizLogo.PNG";
 
 const Form = () => {
   const form = useRef();
@@ -98,7 +99,7 @@ const Form = () => {
   return (
     <div className="welcome-page">
       <div className="form-page-logo">
-        Bizzie💪🏾<span>Trainer</span>
+        <img src={bizLogo} alt="" />
       </div>
       <form ref={form} onSubmit={sendEmail}>
         <h1>CONTACT ME</h1>

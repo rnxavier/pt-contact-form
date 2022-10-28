@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import welcomeImg from "./welcomeImg.png";
+// import welcomeImg from "./welcomeImg.png";
+import welcomeLogo from "./welcomeLogo.png";
 
 const Welcome = () => {
   let navigate = useNavigate();
@@ -10,11 +11,9 @@ const Welcome = () => {
   return (
     <div className="welcome-page">
       <p>PERSONAL TRAINER ENQUIRIES</p>
-      <div className="welcome-logo">
-        Bizzie💪🏾<span>Trainer</span>
-      </div>
+
       <div className="img-div">
-        <img src={welcomeImg} alt="" />
+        <img src={welcomeLogo} alt="" />
       </div>
       <div>
         <h1>Ready to start your fitness journey?</h1>
