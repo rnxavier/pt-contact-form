@@ -2,7 +2,7 @@
 
 ## Simple contact form web app personal trainer enquiries
 
-| <img src=/Users/richellexavier/Desktop/React/Apps/PTContactForm/screenshot1.png width=250> | <img src=/Users/richellexavier/Desktop/React/Apps/PTContactForm/recording.mov width=255> |
+| <img src=/Users/richellexavier/Desktop/React/Apps/PTContactForm/pt-contact-form/screenshot1.png width=250> | <img src=/Users/richellexavier/Desktop/React/Apps/PTContactForm/pt-contact-form/recording.mov width=255> |
 
 ## Also available as a Progressive Web App (PWA) that can be added to your device home screen for easy access
 
