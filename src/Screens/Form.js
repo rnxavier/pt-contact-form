@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +8,18 @@ import emailjs from "@emailjs/browser";
 import bizLogo from "./bizLogo.PNG";
 
 const Form = () => {
+  let navigate = useNavigate();
+  const routeChange = () => {
+    navigate("/");
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/");
+    }, 600000);
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   const form = useRef();
 
   const [formData, setFormData] = useState({
@@ -92,10 +105,6 @@ const Form = () => {
     }
   };
 
-  let navigate = useNavigate();
-  const routeChange = () => {
-    navigate("/");
-  };
   return (
     <div className="welcome-page">
       <div className="form-page-logo">
