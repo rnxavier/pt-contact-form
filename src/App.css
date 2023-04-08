@@ -1,5 +1,5 @@
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* WELCOME */
@@ -46,7 +46,7 @@
   font-size: 3rem;
 }
 
-.welcome-page h1{
+.welcome-page h1 {
   margin-top: 0;
   font-weight: 400;
   font-size: 1.65rem;
@@ -54,19 +54,18 @@
   text-transform: uppercase;
 }
 
-.btn-div{
+.btn-div {
   display: flex;
   justify-content: center;
   margin-top: 2%;
 }
-
 
 .welcome-page-btns {
   display: block;
   width: 40%;
   padding: 1% 3%;
   font-size: 37px;
-  border-radius: 8px ;
+  border-radius: 8px;
   border: 2px solid #95c128;
   text-decoration: none;
   box-shadow: 0 0 10px #808080;
@@ -78,7 +77,7 @@
 
 .welcome-btn {
   margin-top: 5%;
-  background:#95c128;
+  background: #95c128;
   color: #fff;
 }
 
@@ -87,14 +86,28 @@
 .form-page-logo {
   font-weight: 500;
   font-size: 3rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  /* text-align: center; */
   color: #95c128;
 }
 
-.form-page-logo img {
-  width: 40%;
-  height: 40%;
+.biz-logo {
+  width: 30%;
+  height: 30%;
   margin-bottom: 0;
+  align-self: center;
+}
+
+.your-pt-logo {
+  width: 20%;
+  height: 20%;
+  align-self: center;
+}
+
+.better-logo {
+  width: 25%;
+  align-self: center;
 }
 
 form h1 {
@@ -114,13 +127,13 @@ form h1 {
   margin-top: 2%;
   border: none;
   background: #fff;
-  color:#95c128;
+  color: #95c128;
   box-shadow: none;
   font-weight: 500;
 }
 
-
-.txtb input, .txtb textarea {
+.txtb input,
+.txtb textarea {
   width: 100%;
   border: none;
   background: none;
@@ -138,7 +151,7 @@ form h1 {
 }
 
 .txtb p {
- color: red;
+  color: red;
 }
 
 .form-footer {
@@ -154,14 +167,13 @@ form h1 {
 }
 
 textarea {
-  height: 80px
+  height: 80px;
 }
 
 .submit-btn-text span {
   margin-right: 3%;
-  font-size: 30px; 
+  font-size: 30px;
 }
-
 
 /* SUBMITTED */
 .submitted-logo {

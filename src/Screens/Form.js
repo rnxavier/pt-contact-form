@@ -6,6 +6,8 @@ import { useRef, useState } from "react";
 import { serviceID, publicID, templateID } from "../secret";
 import emailjs from "@emailjs/browser";
 import bizLogo from "./bizLogo.PNG";
+import yourPTLogo from "./your-pt-logo.png";
+import betterLogo from "./better-logo.jpeg";
 
 const Form = () => {
   let navigate = useNavigate();
@@ -108,7 +110,9 @@ const Form = () => {
   return (
     <div className="welcome-page">
       <div className="form-page-logo">
-        <img src={bizLogo} alt="" />
+        <img src={yourPTLogo} alt="" className="your-pt-logo" />
+        <img src={bizLogo} alt="" className="biz-logo" />
+        <img src={betterLogo} alt="" className="better-logo" />
       </div>
       <form ref={form} onSubmit={sendEmail}>
         <h1>CONTACT ME</h1>
@@ -116,7 +120,6 @@ const Form = () => {
         <div className="txtb">
           <label>Full Name</label>
           <input
-            // type="text"
             name="name"
             value={formData.name}
             onChange={(e) => {
@@ -129,7 +132,6 @@ const Form = () => {
         <div className="txtb">
           <label>Email Address</label>
           <input
-            // type="email"
             name="email"
             value={formData.email}
             onChange={(e) => {
@@ -142,7 +144,7 @@ const Form = () => {
         <div className="txtb">
           <label>Contact Number</label>
           <input
-            // type="number"
+            type="number"
             name="number"
             value={formData.number}
             onChange={(e) => {
